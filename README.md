@@ -1,4 +1,4 @@
-# nectar_ui
+# nectar_ui-React Native
 <div style="display:'flex';">
 <img src="screenshots/1.jpeg" width="120">
 <img src="screenshots/2.jpeg" width="120">
