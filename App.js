@@ -1,12 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-
+import {Onboarding, Login} from "./app/screen/Index"
+import { useFonts } from 'expo-font';
 export default function App() {
+  const [loaded] = useFonts({
+    GilroyBold: require('./assets/fonts/Gilroy-Bold.ttf'),
+    GilroyHeavy: require('./assets/fonts/Gilroy-Heavy.ttf'),
+    GilroyLight: require('./assets/fonts/Gilroy-Light.ttf'),
+    GilroyMedium: require('./assets/fonts/Gilroy-Medium.ttf'),
+    GilroyRegular: require('./assets/fonts/Gilroy-Regular.ttf'),
+  });
+
+  if (!loaded) {
+    return null;
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View >
+      {/* <Login/> */}
+      {/* <Onboarding/> */}
+      {/* <Splashscreen/> */}
+      <SignIn/>
     </View>
   );
 }
@@ -19,3 +34,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
